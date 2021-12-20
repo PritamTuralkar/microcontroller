@@ -1,0 +1,11 @@
+components for fire alaram system
+
+
+1)breadboard 
+2)wires
+3)ARDUINO R3
+4) piezo buzzer
+5)resistor
+6)gas sensor
+7)temperature sensor
+8)led 

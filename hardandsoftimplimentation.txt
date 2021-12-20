@@ -1,0 +1,33 @@
+
+1] Hardware Implimentation. 
+
+in a Fire alarm system two sensors are used one is gas sensor and another one is the flame sensor. whenever the temperature high is detected by the flame sensor then LED with Buzzer is high means led its glow and the buzzer is produces an alert sound. as well as the smoke or gas is produce and detect by gas sensor then LED with Buzzer is high means led its glow and the buzzer is produces an alert sound. it's necessary to control and avoid an emergency situation.
+
+
+
+2] Software Implementation
+
+
+Software design is divided into two parts. First we write the Arduino program
+in Arduino software. Then we compile it to the Arduino hardware. This Arduino
+command is control the Arduino hardware and other circuit and display connection.
+
+
+
+Installing Arduino, Arduino runs on Windows.
+
+Go to the Arduino software web site at http://arduino.cc/en/Main/Software and
+download the version of the software compatible with our system. We use Arduino
+1.0.5 version.
+
+
+Arduino Language
+
+The Arduino language is implemented in C/C++ and based in Wiring. When
+we write an Arduino sketch, we are implicitly making use of the Wiring library, which
+is included with the Arduino IDE. This allows us to make run able programs by using
+only two functions: setup () and loop (). As mentioned, the Wiring language is
+inspired by Processing, and the Arduino language structure is inherited from the
+Processing language, where the equivalent functions are called setup (). We 51 need to
+include both functions in every Arduino program, even if we don’t need one of them.
+Let’s analyze the structure of a simple Arduino sketch using again the Blink example.

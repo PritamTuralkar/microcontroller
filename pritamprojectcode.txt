@@ -1,0 +1,62 @@
+float temp;
+float vout;
+float vout1;
+int LED =13;
+int piezo=7;
+int gasSensor;
+
+void setup()
+{
+  pinMode(A0,INPUT);
+  pinMode(A1,INPUT);
+  pinMode(LED,OUTPUT);
+  pinMode(piezo,OUTPUT);
+  Serial.begin(6900);
+
+}
+
+void loop()
+{
+  vout=analogRead(A0);
+  vout1=(vout/1023)*5000;
+  temp=(vout1-500)/10;
+  gasSensor=analogRead(A1);
+  
+  if(temp>=80) 
+  {
+    digitalWrite(LED,HIGH);
+    digitalWrite(piezo,HIGH);
+    
+  }
+  else
+  {
+     digitalWrite(LED,LOW);
+     digitalWrite(piezo,LOW);
+  }     
+      
+  if(gasSensor>=100)
+  {
+   
+   digitalWrite(piezo,HIGH);
+   digitalWrite(LED,HIGH); 
+  }
+  else
+    
+  {
+   
+    digitalWrite(piezo,LOW);
+    digitalWrite(LED,LOW);
+  } 
+    
+  Serial.print("in Degree =");  
+  Serial.print(" "); 
+  Serial.print(temp);
+  Serial.print("\t");
+  Serial.print("GasSensor =");
+  Serial.print(" "); 
+  Serial.print(gasSensor);
+  Serial.println();
+  delay(1000);
+    
+    
+}
